@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/edit_profile.css') }}">
+</head>
+
+<body>
+    <h1>Edit profile</h1>
+
+    <div class="logo">
+        <img src="static/images/ChatGPT Image May 31, 2026, 10_31_54 PM.png" alt="logo">
+    </div>
+
+    <form class="first_form" action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="profile-image" id="fileUpload" hidden>
+        <label for="fileUpload" class="custom-btn">Upload Image</label>
+        <button type="submit">Update image</button>
+    </form>
+
+    <form action="/edit_profile" method="post" class="second_form">
+        <h2>Profile Information</h2>
+        <input type="text" name="name" maxlength="40" placeholder="name (max 40 chars)">
+        <input type="text" name="description" placeholder="decription">
+        <input type="text" name="email_1" placeholder="email 1">
+        <input type="text" name="email_2" placeholder="email 2">
+        <input type="text" name="mobile_no_1" placeholder="mobile no. 1">
+        <input type="text" name="mobile_no_2" placeholder="mobile no. 2">
+        <h2>Social Media</h2>
+        <input type="text" name="facebook" placeholder="Facebook">
+        <input type="text" name="instagram" placeholder="Instagram">
+        <input type="text" name="twitter" placeholder="Twitter / X">
+        <input type="text" name="linkedin" placeholder="LinkedIn">
+        <input type="text" name="youtube" placeholder="YouTube">
+        <input type="text" name="github" placeholder="GitHub">
+        <input type="text" name="tiktok" placeholder="TikTok">
+        <input type="text" name="pinterest" placeholder="Pinterest">
+        <button class="update_buttons_2">Update Profile</button>
+    </form>
+    <p class="note">The logo upload and the text input fields have separate submit buttons, and clicking one will only
+        update that specific section. To apply changes to both, please submit each section individually.
+    </p>
+</body>
+
+</html>

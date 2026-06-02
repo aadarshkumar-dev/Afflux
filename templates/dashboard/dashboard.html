@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afflux dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+</head>
+
+<body>
+
+    <div class="msg_wrapper">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for msg in messages %}
+        <div id="notify" class="notify">
+            <p>{{ msg }}</p>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </div>
+
+    <div class="circle">
+        <div class="logo">
+            <img src="static/images/ChatGPT Image May 31, 2026, 10_31_54 PM.png" alt="logo">
+        </div>
+        <div class="h1_w">
+                <h2>
+                    {% if profile["name"] %}
+                    {{ profile["name"] }}
+                    {% else %}
+                    {{ profile["username"] }}
+                    {% endif %}
+                </h2>
+        </div>
+        <div class="profile_main_btns">
+            <button class="ally">Ally</button>
+            <a href="{{ url_for('edit_profile.edit_profile_page') }}">
+                <button class="edit_profile">Edit Profile</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="personal-widgets">
+        <div class="item1"><img src="static/images/chatting.png"></div>
+        <div class="item2"><img src="static/images/notification.png"></div>
+        <div class="item3"><img src="static/images/setting.png"></div>
+    </div>
+
+    <div class="cont1">
+        <div class="grid-item">
+            <img src="static/images/good-feedback.png">
+            <div class="counts">
+                <p>4.6</p>
+                <p>Ratings</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <img src="static/images/handshake.png">
+            <div class="counts">
+                <p>10k</p>
+                <p>Allies</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <img src="static/images/write.png">
+            <div class="counts">
+                <p>34</p>
+                <p>Posts</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <img src="static/images/review.png">
+            <div class="counts">
+                <p>14</p>
+                <p>Reviews</p>
+            </div>
+        </div>
+    </div>
+    <div class="desc_w">
+        <div class="description">
+            <p>{{ profile["description"] }}</p>
+        </div>
+        <div class="desc_img_w">
+            <div>
+                <img src="static/images/down.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="contacts">
+        <div class="item1">
+            <img src="static/images/contact-us.png">
+            <p>Contacts</p>
+        </div>
+        <div class="item2">
+            <img src="static/images/briefcase.png">
+            <p>Services</p>
+        </div>
+        <div class="item3">
+            <img src="static/images/clipboard.png">
+            <p>Needs</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+
+</html>

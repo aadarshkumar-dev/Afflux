@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+    --accent-color-deep: #80b5fe;
+    --accent-color-light: #d9e9ff;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--accent-color-light);
+}
+
+.logo {
+    margin-top: 35px;
+    background-color: white;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 40px auto 15px auto;
+}
+
+.logo img {
+    height: 100px;
+}
+
+h1 {
+    font-size: 1.1rem;
+    margin-top: 10px;
+    color: rgb(93, 93, 255);
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+
+.first_form {
+    display: flex;
+    margin: 0 10px 0 10px;
+}
+
+.first_form button {
+    height: 40px;
+    width: 130px;
+    background: var(--accent-color-deep);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    margin-left: auto;
+}
+
+.custom-btn {
+    height: 40px;
+    width: 130px;
+    background: var(--accent-color-deep);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-btn:hover,
+.first_form button:hover {
+    background: var(--accent-color-light);
+}
+
+.second_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 100px 0;
+}
+
+.second_form input {
+    width: calc(90% - 20px);
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid var(--accent-color-deep);
+    padding: 10px;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+.note{
+    font-size: 0.7rem;
+    text-align: center;
+    margin: 0 6px 20px 6px;
+    color: gray;
+}
+
+.update_buttons_2{
+    height: 40px;
+    width: 130px;
+    background: var(--accent-color-deep);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    margin: 0 auto;
+}

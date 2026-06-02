@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --accent-color-deep: #80b5fe;
+    --accent-color-light: #d9e9ff;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    margin-top: 150px;
+    display: flex;
+    height: 455px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.auth_thumbnail {
+    height: 100%;
+    display: none;
+}
+
+.login_field {
+    background-color: var(--accent-color-deep);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    padding: 70px 20px;
+}
+
+.signup_field {
+    background-color: rgb(218, 50, 50);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    padding: 70px 20px;
+}
+
+form {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+input {
+    height: 50px;
+    width: 270px;
+    border-radius: 50px;
+    padding: 0 10px;
+    border: none;
+    font-size: 1rem;
+}
+
+button {
+    height: 50px;
+    width: 288px;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--accent-color-light);
+    cursor: pointer;
+    font-size: 1rem;
+    -webkit-tap-highlight-color: transparent
+}
+
+button:hover {
+    box-shadow: 0 0 30px white;
+    background-color: white;
+}
+
+input:hover {
+    box-shadow: 0 0 30px white;
+}
+
+.sub_login {
+    text-align: center;
+}
+
+.notify {
+    position: fixed;
+    top: 5px;
+    background-color: var(--accent-color-deep);
+    height: 60px;
+    max-width: 320px;
+    border-radius: 18px;
+    padding: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(-60px);
+}
+
+.notify_come {
+    animation: notification_come 0.3s ease-in-out forwards;
+}
+
+.notify_go {
+    animation: notification_go 0.3s ease-in-out forwards;
+}
+
+@keyframes notification_come {
+    from {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes notification_go {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+}
+
+@media screen and (min-width:750px) {
+
+    .signup_field,
+    .login_field {
+        padding: 70px 45px;
+    }
+}
+
+@media screen and (min-width:1237px) {
+    .auth_thumbnail {
+        display: block;
+    }
+
+    .container {
+        margin-right: 185px;
+    }
+}

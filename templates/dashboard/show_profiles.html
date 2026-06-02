@@ -1,0 +1,41 @@
+<h2>All Profiles</h2>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Email 1</th>
+        <th>Email 2</th>
+        <th>Mobile No. 1</th>
+        <th>Mobile No. 2</th>
+        <th>Facebook</th>
+        <th>Instagram</th>
+        <th>Twitter</th>
+        <th>LinkedIn</th>
+        <th>YouTube</th>
+        <th>GitHub</th>
+        <th>TikTok</th>
+        <th>Pinterest</th>
+        <th>User ID</th>
+    </tr>
+    {% for hor in hors %}
+    <tr>
+        <td>{{ hor[0] }}</td>
+        <td>{{ hor[1] }}</td>
+        <td>{{ hor[2] }}</td>
+        <td>{{ hor[3] }}</td>
+        <td>{{ hor[4] }}</td>
+        <td>{{ hor[5] }}</td>
+        <td>{{ hor[6] }}</td>
+        <td>{{ hor[7] }}</td>
+        <td>{{ hor[8] }}</td>
+        <td>{{ hor[9] }}</td>
+        <td>{{ hor[10] }}</td>
+        <td>{{ hor[11] }}</td>
+        <td>{{ hor[12] }}</td>
+        <td>{{ hor[13] }}</td>
+        <td>{{ hor[14] }}</td>
+        <td>{{ hor[15] }}</td>
+    </tr>
+    {% endfor %}
+</table>
