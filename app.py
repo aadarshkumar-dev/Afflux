@@ -7,7 +7,7 @@ from routes.edit_profile import edit_profile
 
 
 app = Flask(__name__)
-app.secret_key = os.urandom(24)
+app.secret_key = os.environ.get("SECRET_KEY", "dev-secret-key")
 
 
 app.register_blueprint(auth)
