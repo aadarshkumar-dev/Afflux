@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contacts.css') }}">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+
+    <div class="msg_wrapper">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for msg in messages %}
+        <div id="notify" class="notify">
+            <p>{{ msg }}</p>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </div>
+
+    <a href="javascript:history.back()">
+        <ion-icon name="arrow-back" class="back"></ion-icon>
+    </a>
+    <h1>Contact information of {{values['name']}}</h1>
+
+    <div class="boxes boxes1">
+        <ion-icon name="mail-open"></ion-icon>
+        <p>{{ values['email_1'] or 'Not provided' }}</p>
+    </div>
+
+    <div class="boxes boxes1">
+        <ion-icon name="mail-open""></ion-icon>
+        <p>{{ values['email_2'] or 'Not provided' }}</p>
+    </div>
+
+    <div class=" boxes boxes2">
+            <ion-icon name="call"></ion-icon>
+            <p>{{ values['mobile_no_1'] or 'Not provided' }}</p>
+    </div>
+
+    <div class="boxes boxes2">
+        <ion-icon name="call"></ion-icon>
+        <p>{{ values['mobile_no_2'] or 'Not provided' }}</p>
+    </div>
+
+    <div class="boxes boxes3">
+        <div>
+            <ion-icon name="logo-whatsapp"></ion-icon>
+        </div>
+        <p>{{ values['whatsapp'] or 'Not provided' }}</p>
+    </div>
+
+    <div class="boxes boxes4">
+        <div>
+            <ion-icon name="logo-facebook"></ion-icon>
+        </div>
+        <p>{{ values['facebook'] or 'Not provided' }}</p>
+    </div>
+
+    <div class="boxes boxes5">
+        <div>
+            <ion-icon name="logo-instagram"></ion-icon>
+        </div>
+        <p>{{ values['instagram'] or 'Not provided' }}</p>
+    </div>
+
+    <div class="boxes boxes6">
+        <div>
+            <ion-icon name="logo-twitter"></ion-icon>
+        </div>
+        <p>{{ values['twitter'] or 'Not provided' }}</p>
+    </div>
+
+    <div class="boxes boxes7">
+        <ion-icon name="logo-linkedin"></ion-icon>
+        <p>{{ values['linkedin'] or 'Not provided' }}</p>
+    </div>
+
+    <div class="boxes boxes8">
+        <ion-icon name="logo-youtube"></ion-icon>
+        <p>{{ values['youtube'] or 'Not provided' }}</p>
+    </div>
+
+    <div class="boxes boxes10">
+        <ion-icon name="logo-github"></ion-icon>
+        <p>{{ values['github'] or 'Not provided' }}</p>
+    </div>
+
+    <div class="boxes boxes11">
+        <ion-icon name="logo-tiktok"></ion-icon>
+        <p>{{ values['tiktok'] or 'Not provided' }}</p>
+    </div>
+
+    <div class="boxes boxes12">
+        <ion-icon name="logo-pinterest"></ion-icon>
+        <p>{{ values['pinterest'] or 'Not provided' }}</p>
+    </div>
+
+    <footer>
+        <p class="note">
+            Afflux provides contact details as shared by sellers. We do not verify or guarantee responses.
+        </p>
+    </footer>
+</body>
+
+</html>

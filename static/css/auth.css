@@ -17,6 +17,61 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.notify {
+    position: fixed;
+    top: 5px;
+    background-color: var(--accent-color-deep);
+    height: 60px;
+    max-width: 320px;
+    border-radius: 18px;
+    padding: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 2000;
+}
+
+.notify_come {
+    animation: notification_come 0.3s ease-in-out forwards;
+}
+
+.notify_go {
+    animation: notification_go 0.3s ease-in-out forwards;
+}
+
+@keyframes notification_come {
+    from {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes notification_go {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+}
+
+.msg_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .container {
     margin-top: 150px;
     display: flex;
@@ -86,54 +141,6 @@ input:hover {
 
 .sub_login {
     text-align: center;
-}
-
-.notify {
-    position: fixed;
-    top: 5px;
-    background-color: var(--accent-color-deep);
-    height: 60px;
-    max-width: 320px;
-    border-radius: 18px;
-    padding: 5px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transform: translateY(-60px);
-}
-
-.notify_come {
-    animation: notification_come 0.3s ease-in-out forwards;
-}
-
-.notify_go {
-    animation: notification_go 0.3s ease-in-out forwards;
-}
-
-@keyframes notification_come {
-    from {
-        opacity: 0;
-        transform: translateY(-60px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes notification_go {
-    from {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    to {
-        opacity: 0;
-        transform: translateY(-60px);
-    }
 }
 
 @media screen and (min-width:750px) {

@@ -1,78 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Afflux</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
-</head>
+{% block link %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+{% endblock %}
 
-<body>
-    <div class="nav">
-        <div class="filterWrapper">
-            <img id="filterPic" src="{{ url_for('static', filename='images/settings-sliders.png') }}"
-                alt="Search By Filter">
-        </div>
-        <input type="text" placeholder="search">
+{% block title %}
+Afflux
+{% endblock %}
+
+{% block content %}
+
+<div class="nav">
+    <div class="filterWrapper">
+        <img id="filterPic" src="{{ url_for('static', filename='images/settings-sliders.png') }}"
+            alt="Search By Filter">
     </div>
+    <input type="text" placeholder="can't search now">
+</div>
 
-    <div class="filterSidebar"></div>
-    <div class="aboveBlur"></div>
+<div class="filterSidebar">
+    <p>Filters will appear here once services are available ✨
+    </p>
+</div>
+<div class="aboveBlur"></div>
 
-    <div class="bottomNav">
-        <ul>
-            <li class="bn active">
-                <a href="#"><img src="{{ url_for('static', filename='images/home-button.png') }}" alt="Home"></a>
-            </li>
-            <li class="bn">
-                <a href="#"><img src="{{ url_for('static', filename='images/briefcase.png') }}" alt="Home"></a>
-            </li>
-            <li class="bn">
-                <a href="#"><img src="{{ url_for('static', filename='images/clipboard.png') }}" alt="Home"></a>
-            </li>
-            <li class="bn">
-                <a href="#"><img src="{{ url_for('static', filename='images/instagram-post.png') }}" alt="Post"></a>
-            </li>
-            <li class="bn">
-                <a href="#"><img src="{{ url_for('static', filename='images/search.png') }}" alt="Explore"></a>
-            </li>
-            <li class="bn">
-                <a href="{{ url_for('dashboard.dashboard_page') }}">
-                    <img src="{{ url_for('static', filename='images/account.png') }}" alt="Profile">
-                </a>
-            </li>
-        </ul>
-    </div>
+<main>
+    <p>Oops! No services yet</p>
+</main>
 
-    <main>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod sit laboriosam ad aliquid tenetur provident
-            aut voluptas vitae at. Enim, at nisi quae, maxime fuga magni nobis recusandae eligendi repellendus totam,
-            porro quia. Itaque hic, doloribus sed a nulla accusantium ab quas. Mollitia eligendi voluptate molestiae
-            asperiores omnis. Similique beatae iste neque necessitatibus rerum, magni sapiente alias amet quos labore
-            delectus nisi dolor placeat architecto velit nesciunt impedit porro tempora atque accusantium molestias eius
-            ipsum soluta sed. Praesentium id, dignissimos magnam nihil quas iure doloremque dolorem? Nihil aperiam id
-            laborum, cum dolor ad modi unde quasi quos, alias impedit fugit. Ex numquam sapiente dolores, voluptate
-            possimus eos, cum suscipit perspiciatis praesentium quas, officiis nesciunt quos! Temporibus animi sint
-            deserunt nam. Nulla at itaque veritatis animi unde expedita! Nisi numquam et consectetur asperiores eligendi
-            sit magnam consequatur tempora doloremque deserunt quod amet impedit, unde, mollitia fugiat minima natus?
-            Ullam accusamus nam quas non accusantium, eaque ipsam adipisci excepturi nulla unde rem perferendis animi
-            esse atque facere natus similique veniam, laboriosam explicabo nobis ducimus iusto? Id ipsa cum similique,
-            eius natus impedit sequi velit autem pariatur odit placeat sunt hic! Maiores ullam cum sunt tenetur
-            explicabo ea veniam, corporis, at dolore reiciendis nisi ad vel illum dicta pariatur! Iusto saepe impedit
-            repellat cum. Hic sapiente excepturi qui, placeat optio nemo mollitia eaque perspiciatis at nobis magnam
-            maiores. Commodi accusamus ex, saepe suscipit tempora, magnam quae obcaecati eum sit eos officiis dolores,
-            adipisci quas. Maxime deserunt neque rerum, consequatur repellat suscipit. Veniam quibusdam odio delectus,
-            dolorum aliquid sit beatae aut voluptatem aperiam consequuntur! Vitae corrupti dicta eius laudantium
-            reprehenderit ab. Eveniet recusandae, laborum tenetur doloribus voluptatibus vitae aliquid accusantium.
-            Nostrum minus exercitationem id sequi ipsam quod necessitatibus magni voluptatum tenetur, rerum repellendus.
-            Ratione officiis iusto dolores cupiditate nulla minima pariatur! Est earum corporis soluta doloremque,
-            possimus necessitatibus laudantium. Magnam dolorem ut soluta doloribus temporibus, odit animi ipsa error ad
-            rerum enim laudantium porro! Corrupti error sit necessitatibus ducimus, dolorem, repellat rerum deleniti,
-            tempore fuga tempora eaque.</p>
-    </main>
+{% endblock %}
 
-    <script src="{{ url_for('static', filename='js/script.js')}}"></script>
+{% block script %}
+<script src="{{ url_for('static', filename='js/script.js')}}"></script>
+{% endblock %}
 </body>
 
 </html>

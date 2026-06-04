@@ -44,6 +44,7 @@ CREATE TABLE IF NOT EXISTS profile(
     email_2 TEXT,
     mobile_no_1 TEXT,
     mobile_no_2 TEXT,
+    whatsapp TEXT,
     facebook TEXT,
     instagram TEXT,
     twitter TEXT,
@@ -56,6 +57,7 @@ CREATE TABLE IF NOT EXISTS profile(
     FOREIGN KEY (user_id) REFERENCES users(id)
 )
 """)
+
 
 connection.commit()
 connection.close()

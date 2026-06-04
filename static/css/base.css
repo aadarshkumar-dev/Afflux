@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s;
+}
+
+:root {
+    --accent-color-deep: #80b5fe;
+    --accent-color-light: #d9e9ff;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--accent-color-light);
+}
+
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.notify {
+    position: fixed;
+    top: 5px;
+    background-color: var(--accent-color-deep);
+    height: 60px;
+    max-width: 320px;
+    border-radius: 18px;
+    padding: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 2000;
+}
+
+.notify_come {
+    animation: notification_come 0.3s ease-in-out forwards;
+}
+
+.notify_go {
+    animation: notification_go 0.3s ease-in-out forwards;
+}
+
+@keyframes notification_come {
+    from {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes notification_go {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+}
+
+.msg_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    padding: 3px 5px 48px 5px;
+}
+
+.nav img {
+    height: 25px;
+    cursor: pointer;
+}
+
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 5px 0;
+    gap: 25px;
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+.nav input {
+    height: 45px;
+    border-radius: 30px;
+    font-size: medium;
+    padding: 0 10px;
+    border: 1px solid var(--accent-color-deep);
+}
+
+.nav input::placeholder {
+    color: var(--accent-color-deep);
+}
+
+.filterWrapper {
+    background-color: var(--accent-color-light);
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.filterWrapper:hover {
+    background-color: var(--accent-color-deep);
+}
+
+.bottomNav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1001;
+}
+
+.bottomNav a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottomNav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottomNav img {
+    margin: 0 10px;
+    height: 25px;
+}
+
+.bottomNav li:hover {
+    background-color: var(--accent-color-deep);
+}
+
+.bottomNav li {
+    padding: 10px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    background-color: var(--accent-color-light);
+    cursor: pointer;
+}
+
+.bottomNav li.active {
+    background-color: white !important;
+}
+
+.filterSidebar {
+    background-color: white;
+    height: 100vh;
+    width: 70vw;
+    position: fixed;
+    box-shadow: 0 0 20px rgb(70, 70, 70);
+    z-index: 999;
+}
+
+.aboveBlur {
+    background-color: rgba(0, 0, 0, 0.173);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 998;
+}
+
+ion-icon{
+    margin: 0 10px;
+    font-size: 1.7rem;
+    color: black;
+}
+
+.dashboard{
+    font-size: 1.9rem;
+}
+
+.bottomNav img{
+    height: 30px;
+    margin: 0 10px;
+}
+
+@media screen and (min-width:750px) {
+    .bottomNav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .bottomNav li {
+        width: auto;
+        height: 100%;
+    }
+
+    .bottomNav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: auto;
+    }
+
+    main {
+        padding: 3px 3px 0 53px;
+    }
+
+    .filterSidebar {
+        width: 25%;
+        right: 0;
+    }
+}

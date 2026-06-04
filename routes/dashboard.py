@@ -22,3 +22,17 @@ def dashboard_page():
     connection.close()
 
     return render_template("dashboard/dashboard.html", profile=profile)
+
+@dashboard.route("/contacts")
+def contacts_page():
+    if "user_id" not in session:
+        flash("Please login first")
+        return redirect(url_for("auth.login"))
+    
+    with sqlite3.connect("arbor_db.db") as connection:
+        connection.row_factory = sqlite3.Row
+        cursor = connection.cursor()
+
+        cursor.execute("SELECT * FROM profile WHERE user_id = ?", (session["user_id"],))
+        values = cursor.fetchone()
+    return render_template("dashboard/contacts.html", values=values)

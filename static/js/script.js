@@ -1,8 +1,8 @@
-let buttons = document.querySelectorAll(".bn");
 let filter = document.querySelector(".filterWrapper");
 let filterSidebar = document.querySelector(".filterSidebar");
 let aboveBlur = document.querySelector(".aboveBlur");
 let filterPic = document.getElementById("filterPic");
+let buttons = document.querySelectorAll(".bn");
 
 buttons.forEach(button => {
     button.addEventListener("click", function () {

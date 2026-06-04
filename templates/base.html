@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    {% block link %}{% endblock %}
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+
+    <div class="bottomNav">
+        <ul>
+            <li class="bn active">
+                <a href="{{ url_for('home') }}">
+                    <ion-icon name="home-outline"></ion-icon>
+                </a>
+            </li>
+            <li class="bn">
+                <a href="#">
+                    <ion-icon name="briefcase-outline"></ion-icon>
+                </a>
+            </li>
+            <li class="bn">
+                <a href="#">
+                    <ion-icon name="clipboard-outline"></ion-icon>
+                </a>
+            </li>
+            <li class="bn">
+                <a href="#">
+                    <ion-icon name="medkit-outline"></ion-icon>
+                </a>
+            </li>
+            <li class="bn">
+                <a href="#">
+                    <ion-icon name="search-outline"></ion-icon>
+                </a>
+            </li>
+            <li class="bn">
+                <a href="{{ url_for('dashboard.dashboard_page') }}">
+                    <ion-icon name="person-circle-outline" class="dashboard"></ion-icon>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    {% block content %}
+    {% endblock %}
+
+    {% block script %}{% endblock %}
+    <script src="{{ url_for('static', filename='js/base.js') }}"></script>
+</body>
+
+</html>

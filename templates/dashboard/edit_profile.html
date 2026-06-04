@@ -6,10 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/edit_profile.css') }}">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
-    <h1>Edit profile</h1>
+
+    <div class="headline">
+        <a href="javascript:history.back()">
+             <ion-icon name="arrow-back" class="back"></ion-icon>
+        </a>
+        <h1>Edit profile</h1>
+    </div>
 
     <div class="logo">
         <img src="static/images/ChatGPT Image May 31, 2026, 10_31_54 PM.png" alt="logo">
@@ -23,21 +31,37 @@
 
     <form action="/edit_profile" method="post" class="second_form">
         <h2>Profile Information</h2>
-        <input type="text" name="name" maxlength="40" placeholder="name (max 40 chars)">
-        <input type="text" name="description" placeholder="decription">
-        <input type="text" name="email_1" placeholder="email 1">
-        <input type="text" name="email_2" placeholder="email 2">
-        <input type="text" name="mobile_no_1" placeholder="mobile no. 1">
-        <input type="text" name="mobile_no_2" placeholder="mobile no. 2">
+        <p>name:</p>
+        <input value="{{ values.name or '' }}" type="text" name="name" maxlength="40" placeholder="name (max 40 chars)">
+        <p>description:</p>
+        <input value="{{ values.description or '' }}" type="text" name="description" placeholder="decription">
+        <p>email 1:</p>
+        <input value="{{ values.email_1 or '' }}" type="text" name="email_1" placeholder="email 1">
+        <p>email 2:</p>
+        <input value="{{ values.email_2 or '' }}" type="text" name="email_2" placeholder="email 2">
+        <p>mobile no. 1:</p>
+        <input value="{{ values.mobile_no_1 or '' }}" type="text" name="mobile_no_1" placeholder="mobile no. 1">
+        <p>mobile no. 2:</p>
+        <input value="{{ values.mobile_no_2 or '' }}" type="text" name="mobile_no_2" placeholder="mobile no. 2">
+        <p>whatsapp:</p>
+        <input value="{{ values.whatsapp or '' }}" type="text" name="whatsapp" placeholder="Whatsapp">
         <h2>Social Media</h2>
-        <input type="text" name="facebook" placeholder="Facebook">
-        <input type="text" name="instagram" placeholder="Instagram">
-        <input type="text" name="twitter" placeholder="Twitter / X">
-        <input type="text" name="linkedin" placeholder="LinkedIn">
-        <input type="text" name="youtube" placeholder="YouTube">
-        <input type="text" name="github" placeholder="GitHub">
-        <input type="text" name="tiktok" placeholder="TikTok">
-        <input type="text" name="pinterest" placeholder="Pinterest">
+        <p>facebook</p>
+        <input value="{{ values.facebook or '' }}" type="text" name="facebook" placeholder="Facebook">
+        <p>instagram:</p>
+        <input value="{{ values.instagram or '' }}" type="text" name="instagram" placeholder="Instagram">
+        <p>twitter:</p>
+        <input value="{{ values.twitter or '' }}" type="text" name="twitter" placeholder="Twitter / X">
+        <p>linkedin:</p>
+        <input value="{{ values.linkedin or '' }}" type="text" name="linkedin" placeholder="LinkedIn">
+        <p>youtube:</p>
+        <input value="{{ values.youtube or '' }}" type="text" name="youtube" placeholder="YouTube">
+        <p>github:</p>
+        <input value="{{ values.github or '' }}" type="text" name="github" placeholder="GitHub">
+        <p>tiktok:</p>
+        <input value="{{ values.tiktok or '' }}" type="text" name="tiktok" placeholder="TikTok">
+        <p>pinterese:</p>
+        <input value="{{ values.pinterest or '' }}" type="text" name="pinterest" placeholder="Pinterest">
         <button class="update_buttons_2">Update Profile</button>
     </form>
     <p class="note">The logo upload and the text input fields have separate submit buttons, and clicking one will only

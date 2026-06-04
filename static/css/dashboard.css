@@ -17,58 +17,9 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.notify {
-    position: fixed;
-    top: 5px;
-    background-color: var(--accent-color-deep);
-    height: 60px;
-    max-width: 320px;
-    border-radius: 18px;
-    padding: 5px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.notify_come {
-    animation: notification_come 0.3s ease-in-out forwards;
-}
-
-.notify_go {
-    animation: notification_go 0.3s ease-in-out forwards;
-}
-
-@keyframes notification_come {
-    from {
-        opacity: 0;
-        transform: translateY(-60px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes notification_go {
-    from {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    to {
-        opacity: 0;
-        transform: translateY(-60px);
-    }
-}
-
-.msg_wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+a{
+    text-decoration: none;
+    color: inherit;
 }
 
 .circle {
@@ -234,7 +185,6 @@ h1 {
     justify-content: center;
     position: relative;
     top: -14px;
-    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.463));
 }
 
 .desc_img_w div {
@@ -242,7 +192,7 @@ h1 {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    box-shadow: 0 0 15px black;
+    box-shadow: 0 0 20px rgb(255, 255, 255);
     height: 14px;
     width: 14px;
 }
@@ -259,6 +209,7 @@ h1 {
     justify-content: center;
     position: relative;
     top: 15px;
+    color: black;
 }
 
 .contacts .item1,
@@ -279,14 +230,18 @@ h1 {
     cursor: pointer;
 }
 
-.contacts .item1 {
+.contacts a:nth-child(1) {
     margin-right: auto;
 }
 
-.contacts .item3 {
+.contacts a:nth-child(3) {
     margin-left: auto;
 }
 
-.contacts img {
+ion-icon {
+    font-size: 1.7rem;
+}
+
+.contacts img{
     height: 30px;
 }
