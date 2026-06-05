@@ -1,4 +1,4 @@
-# Afflux 🚀
+# Afflux
 
 Afflux is a business networking and opportunity-sharing platform designed to help individuals, professionals, businesses, and entrepreneurs connect, discover opportunities, and grow through meaningful collaboration.
 
