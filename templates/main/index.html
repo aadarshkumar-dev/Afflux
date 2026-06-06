@@ -18,11 +18,33 @@ Afflux
     <input type="text" placeholder="can't search now">
 </div>
 
-<div class="filterSidebar">
-    <p>Filters will appear here once services are available ✨
-    </p>
-</div>
-<div class="aboveBlur"></div>
+    <div class="filterSidebar"></div>
+    <div class="aboveBlur"></div>
+
+    <div class="bottomNav">
+        <ul>
+            <li class="bn active">
+                <a href="#"><img src="{{ url_for('static', filename='images/home-button.png') }}" alt="Home"></a>
+            </li>
+            <li class="bn">
+                <a href="#"><img src="{{ url_for('static', filename='images/briefcase.png') }}" alt="Home"></a>
+            </li>
+            <li class="bn">
+                <a href="#"><img src="{{ url_for('static', filename='images/clipboard.png') }}" alt="Home"></a>
+            </li>
+            <li class="bn">
+                <a href="#"><img src="{{ url_for('static', filename='images/instagram-post.png') }}" alt="Post"></a>
+            </li>
+            <li class="bn">
+                <a href="#"><img src="{{ url_for('static', filename='images/search.png') }}" alt="Explore"></a>
+            </li>
+            <li class="bn">
+                <a href="{{ url_for('dashboard.dashboard_page') }}">
+                    <img src="{{ url_for('static', filename='images/account.png') }}" alt="Profile">
+                </a>
+            </li>
+        </ul>
+    </div>
 
 <main>
     <p>Oops! No services yet</p>
