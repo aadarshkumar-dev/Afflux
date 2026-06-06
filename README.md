@@ -4,6 +4,8 @@ Afflux is a business networking and opportunity-sharing platform designed to hel
 
 The platform aims to provide a centralized space where users can create profiles, showcase products and services, share requirements, build professional networks, and explore new opportunities.
 
+live demo : [click here](https://afflux.onrender.com)
+
 ## Vision
 
 Afflux is being developed with the goal of making business growth and professional networking more accessible, especially for individuals and small businesses seeking connections, visibility, and opportunities.
